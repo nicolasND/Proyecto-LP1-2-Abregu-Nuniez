@@ -85,6 +85,7 @@
             cb1.Size = new Size(151, 23);
             cb1.TabIndex = 4;
             cb1.Text = "Seleccione una opcion:";
+            cb1.KeyPress += cb1_KeyPress;
             // 
             // groupBox1
             // 
@@ -163,8 +164,11 @@
             Controls.Add(cb1);
             Controls.Add(clb1);
             ForeColor = SystemColors.ControlText;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Encuesta sobre gaming";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
